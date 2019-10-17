@@ -34,7 +34,7 @@ class Student extends Person{
         this.favSubjects = attr.favSubjects
     }
     listSubjects() {
-        return `First: ${this.favSubjects[0]}, Second: ${this.favSubjects[1]}, Third: ${this.favSubjects[2]}`;
+       return this.favSubjects.forEach(element => console.log(`I like ${element}`));
     }
     prAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`;
@@ -128,7 +128,7 @@ const joe = new Student ({
 console.log(britt.speak());
 console.log(britt.demo('JavaScript'));
 console.log(josh.grade(jessica, 'JavaScript'));
-console.log(jessica.listSubjects());
+jessica.listSubjects();
 console.log(jessica.prAssignment('JavaScript'));
 console.log(joe.sprintChallenge('React'));
 console.log(kevin.standUp('WEB25'));
